@@ -16,6 +16,8 @@
 		5D5FEEB71CF370E100E9C8A8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D5FEEB51CF370E100E9C8A8 /* LaunchScreen.storyboard */; };
 		5D5FEEC41CF3713E00E9C8A8 /* NonThreadSafely.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D5FEEC31CF3713E00E9C8A8 /* NonThreadSafely.m */; };
 		5D5FEECA1CF3742500E9C8A8 /* ThreadSafely.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D5FEEC91CF3742500E9C8A8 /* ThreadSafely.m */; };
+		5DF140C21CF8270300C690DA /* DhtQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DF140C11CF8270300C690DA /* DhtQueue.m */; };
+		5DF140C61CF8272E00C690DA /* RaceCondition.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DF140C51CF8272E00C690DA /* RaceCondition.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,10 @@
 		5D5FEEC31CF3713E00E9C8A8 /* NonThreadSafely.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NonThreadSafely.m; path = ThreadSafely/NonThreadSafely.m; sourceTree = "<group>"; };
 		5D5FEEC81CF3742500E9C8A8 /* ThreadSafely.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ThreadSafely.h; path = ThreadSafely/ThreadSafely.h; sourceTree = "<group>"; };
 		5D5FEEC91CF3742500E9C8A8 /* ThreadSafely.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ThreadSafely.m; path = ThreadSafely/ThreadSafely.m; sourceTree = "<group>"; };
+		5DF140C01CF8270300C690DA /* DhtQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DhtQueue.h; sourceTree = "<group>"; };
+		5DF140C11CF8270300C690DA /* DhtQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DhtQueue.m; sourceTree = "<group>"; };
+		5DF140C41CF8272E00C690DA /* RaceCondition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RaceCondition.h; sourceTree = "<group>"; };
+		5DF140C51CF8272E00C690DA /* RaceCondition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RaceCondition.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +72,8 @@
 		5D5FEEA31CF370E100E9C8A8 /* GCDExample */ = {
 			isa = PBXGroup;
 			children = (
+				5DF140C31CF8272200C690DA /* RaceCondition */,
+				5DF140BF1CF826F700C690DA /* Queue */,
 				5D5FEECB1CF3798A00E9C8A8 /* GCD */,
 				5D5FEEC11CF3711B00E9C8A8 /* ThreadSafely */,
 				5D5FEEC01CF3710600E9C8A8 /* Storyboard */,
@@ -130,6 +138,24 @@
 			children = (
 			);
 			name = GCD;
+			sourceTree = "<group>";
+		};
+		5DF140BF1CF826F700C690DA /* Queue */ = {
+			isa = PBXGroup;
+			children = (
+				5DF140C01CF8270300C690DA /* DhtQueue.h */,
+				5DF140C11CF8270300C690DA /* DhtQueue.m */,
+			);
+			path = Queue;
+			sourceTree = "<group>";
+		};
+		5DF140C31CF8272200C690DA /* RaceCondition */ = {
+			isa = PBXGroup;
+			children = (
+				5DF140C41CF8272E00C690DA /* RaceCondition.h */,
+				5DF140C51CF8272E00C690DA /* RaceCondition.m */,
+			);
+			path = RaceCondition;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -206,6 +232,8 @@
 				5D5FEEAC1CF370E100E9C8A8 /* ViewController.m in Sources */,
 				5D5FEEB21CF370E100E9C8A8 /* GCDExample.xcdatamodeld in Sources */,
 				5D5FEECA1CF3742500E9C8A8 /* ThreadSafely.m in Sources */,
+				5DF140C61CF8272E00C690DA /* RaceCondition.m in Sources */,
+				5DF140C21CF8270300C690DA /* DhtQueue.m in Sources */,
 				5D5FEEA91CF370E100E9C8A8 /* AppDelegate.m in Sources */,
 				5D5FEEA61CF370E100E9C8A8 /* main.m in Sources */,
 			);
@@ -356,6 +384,7 @@
 				5D5FEEBD1CF370E100E9C8A8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

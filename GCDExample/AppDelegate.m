@@ -41,20 +41,20 @@
         for (NSUInteger i = 0; i < 100; i++) {
             [[ThreadSafely shareInstance] addItemInProtectQueue:[NSString stringWithFormat:@"%lu",(unsigned long)i]];
         }
-        NSLog(@"after 1:%ld =", [[ThreadSafely shareInstance] getItemsInProtectQueue].count);
+        NSLog(@"after 1: = %ld", [[ThreadSafely shareInstance] getItemsInProtectQueue].count);
     });
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         for (NSUInteger i = 0; i < 100; i++) {
             [[ThreadSafely shareInstance] removeItemInProtectQueue:[NSString stringWithFormat:@"%lu",(unsigned long)i]];
         }
-        NSLog(@"after 2:%ld =", [[ThreadSafely shareInstance] getItemsInProtectQueue].count);
+        NSLog(@"after 2: = %ld", [[ThreadSafely shareInstance] getItemsInProtectQueue].count);
     });
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(testSingletonClassIsThreadSafely) userInfo:nil repeats:true];
+    //[NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(testSingletonClassIsThreadSafely) userInfo:nil repeats:true];
     return YES;
 }
 

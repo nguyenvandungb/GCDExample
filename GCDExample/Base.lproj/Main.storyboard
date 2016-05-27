@@ -14,13 +14,32 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UWA-NX-lHq">
+                                <rect key="frame" x="82" y="252" width="157" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="hpp-UF-zBO"/>
+                                    <constraint firstAttribute="width" constant="157" id="rAy-B2-HBr"/>
+                                </constraints>
+                                <state key="normal" title="Race condition Test"/>
+                                <connections>
+                                    <action selector="testAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PLQ-jl-67x"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="UWA-NX-lHq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BXP-po-tSi"/>
+                            <constraint firstItem="UWA-NX-lHq" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="HFI-vU-B8h"/>
+                        </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="264" y="262"/>
         </scene>
     </scenes>
 </document>
